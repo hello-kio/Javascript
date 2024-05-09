@@ -64,6 +64,13 @@ const zurr = function(){
 //object--type-->0 ; NULL--type-->0 sp effectively null-->object
 //In modern Js Null is a primitive data type and is not considered an object but for compatibility erasons it till now also shows : "object"
 
+//-------->stack and heap<-----------------
+
+//stack memory(primitive data types)
+//heap memory (non-primitive data types)
+
+//you get *copy in stack* and *reference in heap* 
+
 
 
 
