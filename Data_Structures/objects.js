@@ -84,6 +84,24 @@ console.log(Object.entries(user));//you can access all key values of the object(
 
 console.log(user.hasOwnProperty('location'));//returns true if location named keys exists else false ;
 
+//---------->Destructuring of Objects<-------------
+
+const course = {
+    name : "boot.dev"
+    ,price : 9.99
+    ,instructor : 'melenki'
+}
+//so that we don't have to do course.price again and again 
+const {price : Rs} = course ;//we can also sccess this using Rs now
+
+console.log(Rs);
+
+//a JSON object :-
+{
+    'channelName' : "codeflamingo",
+    'courseLanguages' : "Javascript,Python",
+    'fees' : 0
+}
 
 
 
