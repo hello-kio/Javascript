@@ -25,7 +25,7 @@ function nuke(){
     console.log(this);
 }
 
-nuke();
+// nuke();
 
 
 //we can't use this inside a function like we do in objets
@@ -33,15 +33,34 @@ function nuke(){
     let userName = "github"
     console.log(this.userName);//this will say undefined ;
 }
-nuke;
+// nuke;
 //but
 function nuke(){
     userName = "github"
     console.log(this.userName);//this will say github ;
 }
-nuke;
+// nuke();
 
+//function stored in a variable ;
+// const cat = function () {
+//     userName = "github"
+//     console.log(this.userName);
+// }
+// we can do something like this to make it an arrow function
+const cat = () => {
+    userName = "github"
+    console.log(this.userName);
+}
+cat();
 
+//if we have small code then we can write it ike this without parenthesis just in a bracket and we don't have to write return also ;it will perform the same ;
+const adD = (num1,num2) => (num1+num2)
+
+console.log(adD(1,9));
+
+//we can also return objects in this
+const last = () => ({name : "cat"})
+console.log(last());//this will reutn the object{name : "cat"}
 
 
 
