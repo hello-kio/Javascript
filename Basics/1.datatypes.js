@@ -1,4 +1,4 @@
-//primitive and non primite data types
+    //primitive and non primite data types
 // categorization on the basis of how they store data and how we can access data 
 
 //primitive : string , Number(no float) , boolean , null, undefined , BigInt , symbols
@@ -7,7 +7,7 @@
 
 //Js is a synamically types language because we don't have to defien what data type are we gonna store in the variable and we can change it in later stage for example :
 let meow = "cat" 
-meow = 3783
+meow = 3783 
 // meow = 022424
 //octal literals are not allowed
 // explanation : In non-strict mode, JavaScript allows the use of octal literals, which are numbers with a leading zero (0) followed by a sequence of octal digits (0-7), such as 012 (which represents the decimal value 10). However, octal literals can be confusing and error-prone, especially for beginners, because the leading zero can easily be overlooked.
@@ -27,7 +27,7 @@ const id = Symbol("123")
 const uwuid = Symbol("123")
 
 console.log(id===uwuid)
-//output == false even if the symbol are smae they are unique :)
+//output == false even if the symbol are same they are unique :)
 
 // Array
 let names = ["rohan", "meow" , "lambda"]
