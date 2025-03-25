@@ -1,0 +1,71 @@
+1️⃣ Global Execution Context (GEC)
+
+Whenever you run a JavaScript program, the Global Execution Context (GEC) is created first.
+
+It is associated with the global object (window in browsers, global in Node.js).
+
+The "this" keyword in GEC refers to the global object.
+
+2️⃣ Phases of Execution Context
+
+Each execution context (global or function) has two phases:
+
+(a) Memory Creation Phase (Hoisting)
+   Allocates memory for variables & functions but does not execute them.
+
+   Variables get initialized as undefined.
+
+   Functions are stored entirely in memory.
+
+(b) Execution Phase
+   JavaScript runs the code line by line.
+
+   Variables are assigned values.
+
+   Functions are executed when called.
+
+3️⃣ Function Execution Context (FEC)
+
+Whenever a function is invoked, a new execution context is created on top of the stack.
+
+Each Function Execution Context (FEC) has:
+
+  ->It's own Memory Phase & Execution Phase
+
+  ->It's own "this" binding
+
+  ->Access to variables in its local scope & parent scope 
+
+Example:
+
+function greet() {
+    var name = "kio";
+    console.log("Hello, " + name);
+}
+greet();
+
+Step-by-Step Execution:
+
+1.Global Execution Context (GEC) Created
+
+->greet function stored in memory.
+
+2.Memory Phase of GEC
+
+greet → Function definition stored
+
+3.Execution Phase of GEC
+
+Calls greet() → New Function Execution Context (FEC) Created.
+
+   3.1 Memory Phase of FEC (for greet())
+
+      name = undefined
+
+   3.2 Execution Phase of FEC
+
+      name = "kio"
+
+      Prints "Hello, kio"
+
+   3.3 FEC Removed from Stack → Control returns to GEC.
