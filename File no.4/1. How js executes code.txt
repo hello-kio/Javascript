@@ -6,7 +6,7 @@ It is associated with the global object (window in browsers, global in Node.js).
 
 The "this" keyword in GEC refers to the global object.
 
-2️⃣ Phases of Execution Context
+2️⃣ Phases of Execution Context 
 
 Each execution context (global or function) has two phases:
 
