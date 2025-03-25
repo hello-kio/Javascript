@@ -98,11 +98,11 @@ console.log(Rs);
 
 //a JSON object :-
 {
-    'channelName' : "codeflamingo",
-    'courseLanguages' : "Javascript,Python",
-    'fees' : 0
-}
-
+    "channelName" : "codeflamingo",
+    "courseLanguages" : "Javascript,Python",
+    "fees" : 0
+}//only double quotes work in json not the single ones and can't store functions, variables and cmments in json
+// only pure data.
 
 
 
