@@ -109,6 +109,75 @@
 // let button = document.querySelector("button");
 // button.style.backgroundColor = "blue";
 
+// 📌 3. Adding & Removing Elements
+// Create, insert, and remove elements dynamically.
+
+// 👉 document.createElement(tag) (Creates a new element)
+// let newPara = document.createElement("p");
+// newPara.textContent = "This is a new paragraph!";
+
+// 👉 parent.appendChild(child) (Adds a child at the end)
+// document.body.appendChild(newPara);
+
+// 👉 parent.insertBefore(newChild, existingChild) (Inserts before an element)
+// let existingPara = document.querySelector("p");
+// document.body.insertBefore(newPara, existingPara);
+
+// 👉 element.remove() (Removes an element)
+// let oldDiv = document.getElementById("old");
+// oldDiv.remove();
+
+
+// 📌 4. Event Handling
+// Handle user interactions.
+
+// 👉 element.addEventListener(event, callback) (Adds an event listener)
+// let btn = document.querySelector("button");
+// btn.addEventListener("click", function() {
+//     alert("Button Clicked!");
+// });
+
+// 👉 element.removeEventListener(event, callback) (Removes an event listener)
+// function showAlert() {
+//     alert("Clicked!");
+// }
+// btn.addEventListener("click", showAlert);
+// btn.removeEventListener("click", showAlert);
+
+// 📌 5. Traversing the DOM (Moving Between Elements)
+// Navigate through elements.
+// 👉 element.parentElement (Gets the parent)
+// let child = document.querySelector("p");
+// console.log(child.parentElement); // Logs parent element
+
+// 👉 element.children (Gets all children)
+// let parentDiv = document.querySelector("div");
+// console.log(parentDiv.children); // Logs HTMLCollection of child elements
+
+// 👉 element.firstElementChild (Gets first child element)
+// console.log(parentDiv.firstElementChild);
+
+// 👉 element.lastElementChild (Gets last child element)
+// console.log(parentDiv.lastElementChild);
+
+// 👉 element.previousElementSibling (Gets previous sibling)
+// let nextPara = document.querySelector("p");
+// console.log(nextPara.previousElementSibling);
+
+// 👉 element.nextElementSibling (Gets next sibling)
+// console.log(nextPara.nextElementSibling);
+
+// 📌 6. Forms & User Input
+// Work with forms and input fields.
+// 👉 document.forms (Gets all forms)
+// console.log(document.forms[0]); // Logs first form
+
+// 👉 document.getElementById("input").value (Gets input value)
+// let nameInput = document.getElementById("name");
+// console.log(nameInput.value); // Logs input value
+// 
+
+
 
 
 console.log("hello")
