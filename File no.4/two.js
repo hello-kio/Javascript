@@ -179,9 +179,101 @@
 
 
 
-
 console.log("hello")
 //querySelectorAll() <-- this returns the datatype of nodelist that is not like array but behaves somewhat like array 
 
 //traversing html collection ;
+
+const templist = document.getElementsByClassName("list_item");
+console.log(templist);
+
+//makes an array from the html collextion;
+let convertedarray = Array.from(templist) ; 
+console.log(convertedarray);
+
+convertedarray[2].style.color="purple";
+
+//query selector vs query selector all 
+// -> selector selects the first matching and all selects all the matching and returns them 
+// -> selector gives only 1 element ; nodelist is returned in case of all();
+
+let parentselector = document.querySelector(".parent")
+console.log(parentselector);
+
+//parent.children returns the childs of the parent
+console.log(parentselector.children); 
+let random_child = parentselector.lastChild ;
+
+//and you can access them using normal array iterations[0],[3] and all ;
+// parent.firstElementChild ; parent.lastElementChild 
+//obv first and last child of parent ;
+
+console.log(random_child.parentElement);//gets the parent
+console.log(random_child.nextElementSibling);// gets next sibling in this case it would be null :3
+
+//this gives the child nodes 
+console.log(parentselector.childNodes)
+
+
+// creating elements using DOM
+let x = document.createElement("div") //basically div holding a paragraph
+let y = document.createElement("p") //this is paragraph and other things can also be made like a div
+
+y.style.color = "crimson";
+y.style.fontSize = "125% ";
+y.textContent = "this is for testing purpose only";
+x.style.padding = "5px";
+
+// after doing all this still the element would not be visible as we have not added it into the document so 
+document.body.appendChild(x);
+//and we have to add p also to the div ;
+x.appendChild(y);
+//now it should be visible
+
+//generally we add child to parent and then parent to body of the document :3
+// The reason we use .lang in querySelector() but just "lang" in getElementsByClassName() comes down to how these methods interpret selectors query uses css selectors whereas get element uses the classname only
+
+//we can also create a function to add elements ;
+function addlang(name){
+    //document.body.getElementsByClassName(".lang").appendChild(document.createElement("li").setAttribute("class","lang_names").textContent(name));
+    let new_name = document.createElement("li");
+    new_name.innerText = name ;
+    new_name.setAttribute("class","lang_name");
+    const parent = document.body.getElementsByClassName("lang")[0];
+    parent.appendChild(new_name);
+    //this method btw is not optimised and it is better to use textNode insted of innerHTML and innertext bcz
+// Less Parsing and Rendering: When you use innerHTML, the browser has to parse the provided string as HTML, even if it's just plain text. This parsing process consumes resources. After parsing, the browser then needs to render the resulting HTML structure. innerText also triggers a re-rendering of the element to calculate the visible text content.
+// Direct Manipulation: Creating and appending a text node directly manipulates the Document Object Model (DOM) at a lower level. You're essentially telling the browser: "Here's some text, put it in this element." This avoids the overhead of HTML parsing and the potentially complex rendering calculations involved with innerHTML and innerText.
+// Security: While not directly a performance optimization, using innerText or especially innerHTML with user-provided data can open up security vulnerabilities (Cross-Site Scripting or XSS attacks) if the data contains malicious HTML or JavaScript. Text nodes treat the content purely as text, mitigating this risk.
+//  updated code would be like 
+    // let new_name = document.createElement("li");
+    // let textNode = document.createTextNode(name); // this Create a text node
+    // new_name.appendChild(textNode);             //this Append the text node to the li
+    // const parent = document.body.getElementsByClassName("lang")[0];
+    // parent.appendChild(new_name);
+}
+addlang("python");
+addlang("Ocaml");
+
+//editing element ; editing can be done in same way so i'll try making a function for the same ;
+//lol won't happen will write normally only XD
+// document.querySelector(".")
+
+//last thing i am doing is on line no 241 as adding classname also for my table vid 14:28 ; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
