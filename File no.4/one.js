@@ -153,3 +153,30 @@ let initial_val = 0 ;
 const my_total = numbers.reduce((accumulator,curr_val)=>(accumulator+curr_val),0);
 
 console.log(my_total);
+
+//practice 
+const real = [1, 2, 3, 4, 5];
+
+// let doubled = numbers.map(num => num * 2);
+//console.log(real.map(num => num * 2)); // Output: [2, 4, 6, 8, 10]
+
+//return real.map(num => num * 2) this won't work as return only works inside a scope;
+
+//functions are passed as a reference only not as a functoin
+function greet(name, callback) {//sayGoodbye is passed here but weather it ezecutes or not is not defined here but inside the scope of the functin
+    
+    console.log("Hello, " + name);
+    callback(); // Executing the callback function
+}
+
+function sayGoodbye() {
+    console.log("Goodbye!");
+}
+
+// Passing `sayGoodbye` as a callback
+greet("kio", sayGoodbye);
+
+
+
+
+
