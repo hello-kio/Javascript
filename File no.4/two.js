@@ -238,7 +238,7 @@ function addlang(name){
     //document.body.getElementsByClassName(".lang").appendChild(document.createElement("li").setAttribute("class","lang_names").textContent(name));
     let new_name = document.createElement("li");
     new_name.innerText = name ;
-    new_name.setAttribute("class","lang_name");
+    new_name.setAttribute("class","lang_names");
     const parent = document.body.getElementsByClassName("lang")[0];
     parent.appendChild(new_name);
     //this method btw is not optimised and it is better to use textNode insted of innerHTML and innertext bcz
@@ -258,10 +258,30 @@ addlang("Ocaml");
 //editing element ; editing can be done in same way so i'll try making a function for the same ;
 //lol won't happen will write normally only XD
 // document.querySelector(".")
+//rawrr why won't it happen `owo`
+function edit(newName,n){
+    // document.getElementsByClassName("lang")[0].children[n-1]=newName ;
+//can't do this as we did't change the inner text like lol ;
+ let x = document.createTextNode(newName);
+//  document.getElementsByClassName("lang")[0].children[n-1]
+ document.getElementsByClassName("lang")[0].replaceChild(x,document.getElementsByClassName("lang")[0].children[n-1])
 
-//last thing i am doing is on line no 241 as adding classname also for my table vid 14:28 ; 
+//  //for getting the dot also of the table obv;
+//  let val = newName ; //unoptimised approach so we use the above one ig lol idk :3
+//  document.getElementsByClassName("lang")[0].children[n-1].innerText=val ; 
 
+}
 
+edit("capibara",3)
+//-->last thing i am doing is on line no 241 as adding className also for my table  ; 
+
+//funxtion for removing;
+function remove(n){
+    let x = document.querySelector(".lang")[n-1];
+    x.remove();
+}
+
+remove(4);
 
 
 
