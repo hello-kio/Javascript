@@ -1,0 +1,115 @@
+.game-container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .question-box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+  .question-mark {
+    font-size: 48px;
+  }
+  
+  .range-text {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  
+  .button-container {
+    margin-top: 20px;
+  }
+  
+  .start-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .start-btn:hover {
+    background-color: #3e8e41;
+  }
+
+  .restart-btn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .restart-btn:hover {
+    background-color: #3e8e41;
+  }
+
+  .button-container, .button-container2 {
+    display: inline-block;
+    margin: 10px;
+  }
+
+  #guess-area {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #userGuess {
+    width: 170px;
+    height: 30px;
+    font-size: 18px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  #checkBtn {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+  #checkBtn:hover {
+    background-color: #3e8e41;
+  }
+
+  /*for chances */
+  .chances-remaining {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+    display:none ;
+  }
+  
+  #chances {
+    font-weight: bold;
+  }
+  
+  #message {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #666;
+  }
+
+  .hidden{
+    display:none ;
+  }
